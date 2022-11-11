@@ -10,13 +10,16 @@ let newGameBtn = document.getElementById("new-game");
 let back = document.getElementById("back");
 let mainPage = document.querySelector(".wrapper");
 
+let switchScreen = () => {
+  popup.classList.toggle("hide");
+};
+
 newGameBtn.addEventListener("click", function () {
-  popup.classList.add("hide");
+  switchScreen();
 });
 
 back.addEventListener("click", function () {
-  mainPage.classList.add("hide");
-  // popup.classList.remove("hide");
+  switchScreen();
 });
 
 //WINNING PATTERN ARRAY
