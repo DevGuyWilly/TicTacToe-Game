@@ -37,3 +37,41 @@ let winningPattern = [
 //PLAYER 'X' PLAY FIRST
 let xTurn = true;
 let count = 0;
+
+//Disable All Buttons
+const disableButtons = () => {
+  btnRef.forEach((element) => (element.disabled = true));
+  //enable popup
+  switchScreen();
+};
+
+//Enable all buttons (For New Game and Restart)
+const enableButtons = () => {
+  btnRef.forEach((element) => {
+    element.innerText = "";
+    element.disabled = false;
+  });
+  switchScreen();
+};
+
+//This function will be excuted when a player wins
+let winFunction = (arg) => {
+  disableButtons();
+  msg.textContent = `Player ${arg} won`;
+};
+
+// Function for draw
+const drawFunction = () => {
+  disableButtons();
+  msg.innerHTML = "&#x1F60E; <br> It's a Draw";
+};
+
+// DISPLAY X AND O ONCE CLICKED
+btnRef.forEach((element) => {
+  // console.log("clicked");
+  element.addEventListener("click", function () {
+    console.log("Button Clicked");
+    if (xTurn) {
+    }
+  });
+});
