@@ -1,4 +1,4 @@
-## TIP-CALACULATOR
+## TIC-TAC-TOE
 
 ### Built with
 
